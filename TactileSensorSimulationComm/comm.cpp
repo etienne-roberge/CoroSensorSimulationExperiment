@@ -5,11 +5,12 @@
 #include <sys/stat.h>
 #include <cstring>
 #include <unistd.h>
-#include <utmp.h>
-#include <fcntl.h>      // File control definitions
 #include <termios.h>    // POSIX terminal control definitions
 
+//We put everything under extern "C" so that the C++ doesn't mess up with the linkage name. Makes it easier to link with
+//python cType afterward.
 extern "C" {
+
 #define PUT_BE2(ptr, data)      \
     do {                        \
         uint8_t *p = (ptr);     \

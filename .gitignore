@@ -6,3 +6,9 @@ TactileSensorSimulComm/.idea/
 TactileSensorSimulationComm/.idea/
 
 TactileSensorSimulationComm/cmake-build-debug/
+
+sensorCharacterisation/.idea/
+
+sensorCharacterisation/__pycache__/TactileSensorSubscriber.cpython-38.pyc
+
+sensorCharacterisation/__pycache__/Mark10Comm.cpython-38.pyc

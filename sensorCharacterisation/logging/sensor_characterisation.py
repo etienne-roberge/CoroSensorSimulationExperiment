@@ -12,7 +12,7 @@ ts = TactileSensorSubscriber()
 mc = Mark10Communication()
 
 def createLogFile():
-    with open("logging/log_"+str(xPos)+"_"+str(yPos)+".csv", 'w', newline='') as csvfile:
+    with open("logs/log_"+str(xPos)+"_"+str(yPos)+".csv", 'w', newline='') as csvfile:
         writer = csv.writer(csvfile, delimiter=' ', quotechar='|', quoting=csv.QUOTE_MINIMAL)
         titles = ['force']
         for i in range(28):
@@ -20,7 +20,7 @@ def createLogFile():
         writer.writerow(titles)
 
 def logData():
-    with open("logging/log_" + str(xPos) + "_" + str(yPos) + ".csv", 'a', newline='') as csvfile:
+    with open("logs/log_" + str(xPos) + "_" + str(yPos) + ".csv", 'a', newline='') as csvfile:
         writer = csv.writer(csvfile, delimiter=' ', quotechar='|', quoting=csv.QUOTE_MINIMAL)
         while recording:
             line = [mc.force]

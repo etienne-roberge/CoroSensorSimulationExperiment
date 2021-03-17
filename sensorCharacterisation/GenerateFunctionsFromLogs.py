@@ -17,7 +17,7 @@ def getPositionInFilename(fileName):
     test = fileName.split("_")
     posX = int(test[1])
     posY = int(test[2].split(".")[0])
-    return posX, posY
+    return [posX, posY]
 
 
 def loadAllData():
@@ -57,7 +57,7 @@ def zeroAllData(zero, leData):
     for i in range(len(leData)):
         d = np.array(leData[i])
         a = np.array(zero[i])
-        d = d - a
+        #d = d - a
         data.append(d)
 
     return test, data
